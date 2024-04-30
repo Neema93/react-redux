@@ -1,5 +1,6 @@
 import React from "react";
-const User = () =>{
+const User = (props) =>{
+    console.warn(props)
     return(
         <div>
             <h1> User component</h1>

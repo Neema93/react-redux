@@ -6,7 +6,7 @@ function App() {
     <div className="App">
     
     
-    <User />
+    <User data= {{name:"Neema"}}/>
     </div>
   );
 }
