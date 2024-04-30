@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import User from './component/User';
 function App() {
   return (
     <div className="App">
-    <h1>
-      App component
-    </h1>
+    
+    
+    <User />
     </div>
   );
 }
