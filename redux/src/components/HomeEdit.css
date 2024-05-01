@@ -1,0 +1,30 @@
+.cart-wrapper{
+    margin-left: 1em;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+.item{
+    float: left;
+    width: 120px;
+    padding: 15px;
+    display: inline;
+}
+.img-wrapper img{
+    height: 80px;
+    width: 100px;
+
+}
+.text-wrapper{
+    margin-top: 1em;
+}
+.btn-wrapper button{
+    margin-top: 1em;
+    background-color: rgb(38, 35, 35);
+    color: white;
+    width: 100px;
+    box-shadow: gray 1px 1px 5px;
+    border-radius: 5px;
+    text: border-radius;
+}
