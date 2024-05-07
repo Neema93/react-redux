@@ -1,0 +1,12 @@
+const addToCart= (data) =>{
+    return{
+        type:'ADD_TO_CART',
+        data: data
+    }
+}
+const removeToCart= (data) =>{
+    return{
+        type:'REMOVE_TO_CART',
+        data: data
+    }
+}
