@@ -19,7 +19,7 @@ function Home(props) {
 
                 </div>
                 <div className="btn-wrapper item">
-                    <button >Add to cart</button>
+                    <button onClick={()=>{props.addToCartHandler({price:'1000$',name:'I-phone'})}}>Add to cart</button>
 
                 </div>
 
