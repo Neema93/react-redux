@@ -1,6 +1,7 @@
 import React from "react";
 import './HomeEdit.css';
-function Home() {
+function Home(props) {
+    console.warn(props)
     return(
         <div>
             <div className="add-to-cart">
@@ -18,7 +19,7 @@ function Home() {
 
                 </div>
                 <div className="btn-wrapper item">
-                    <button>Add to cart</button>
+                    <button >Add to cart</button>
 
                 </div>
 
