@@ -1,5 +1,6 @@
 import React from 'react'
 function Header(props){
+    console.warn("Header",props.data)
     return(
         <div>
              <div className="add-to-cart">
