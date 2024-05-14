@@ -7,7 +7,8 @@ export  const addToCart= (data) =>{
         data: data
     }
 }
-const removeToCart= () =>{
+export const removeToCart= () =>{
+    console.warn("action")
     return{
         type: REMOVE_TO_CART
       
