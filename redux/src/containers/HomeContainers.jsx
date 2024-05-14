@@ -3,7 +3,7 @@ import Home from "../components/Home"
 import {connect} from 'react-redux'
 import { addToCart, removeToCart } from "../service/actions/action";
 const mapStateToProps=state=>({
-    // data:state.cardItems
+     data:state.removeItems
 })
 const mapDispatchProps=dispatch=>({
     addToCartHandler:data=>dispatch(addToCart(data)),
