@@ -7,7 +7,7 @@ function Header(props){
                 <span>{props.data.length}</span>
                 <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png"/>
             </div>
-            <h1>Home Component</h1>
+            <h1>Home</h1>
         </div>
     )
 }
