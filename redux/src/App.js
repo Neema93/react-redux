@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <HeaderContainer />
       <HomeContainers />
+      <hr></hr>
       <Counter />
     </div>
   );
