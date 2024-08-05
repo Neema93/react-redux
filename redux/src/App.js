@@ -3,7 +3,7 @@ import './App.css';
 //import User from './components/User';
 import HomeContainers from './containers/HomeContainers';
 import HeaderContainer from './containers/HeaderContainer';
-import Counter from './counter/Counter';
+import Counter from './Udemy/counter/Counter';
 
 function App() {
   return (
