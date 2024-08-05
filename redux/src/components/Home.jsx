@@ -1,6 +1,6 @@
 import React from "react";
 import './HomeEdit.css';
-import Header from './Header';
+
 function Home(props) {
     console.warn("props",props)
     return(

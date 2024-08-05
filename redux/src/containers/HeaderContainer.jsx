@@ -1,7 +1,7 @@
 
 import Header from "../components/Header"
 import {connect} from 'react-redux'
-import { addToCart, removeToCart } from "../service/actions/action";
+import {  removeToCart } from "../service/actions/action";
 const mapStateToProps=state=>({
     data:state.cardItems
 })

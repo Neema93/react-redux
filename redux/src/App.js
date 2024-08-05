@@ -4,7 +4,7 @@ import './App.css';
 import HomeContainers from './containers/HomeContainers';
 import HeaderContainer from './containers/HeaderContainer';
 import Counter from './Udemy/counter/Counter';
-import Expensify from './Udemy/Expensify/Expensify';
+
 function App() {
   return (
     <div className="App">
@@ -12,9 +12,7 @@ function App() {
       <HomeContainers />
       <hr></hr>
       <Counter />
-      <hr></hr>
-      <h1>Expensify</h1>
-    <Expensify />
+    
     </div>
   );
 }
