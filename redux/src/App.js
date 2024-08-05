@@ -13,6 +13,7 @@ function App() {
       <hr></hr>
       <Counter />
       <hr></hr>
+      <h1>Expensify</h1>
     <Expensify />
     </div>
   );
