@@ -8,9 +8,12 @@ import RecipeSearch from './pages/RecipeSearch';
 import ShoppingList from './pages/ShoppingList';
 import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
+import Header from './components/Header';
 function App() {
   return (
     <div className="App">
+      <Header />
       <Router>
         <nav>
           <ul>
@@ -45,6 +48,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }
