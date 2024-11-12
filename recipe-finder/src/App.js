@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 function App() {
   return (
-    <div className="App">
+    <div>
      
       <Router>
       <Header />
@@ -25,8 +25,9 @@ function App() {
           <Route path="/ShoppingList" element={<ShoppingList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
+
     </div>
   );
 }

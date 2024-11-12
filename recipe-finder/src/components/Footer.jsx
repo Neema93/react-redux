@@ -1,9 +1,11 @@
 import React from "react";
-
+import './../styles/Footer.css'
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer Page</h1>
+    <div className="footer">
+
+ 
+    <p>Copyright @ RecipeFinder.inc</p>
       
     </div>
   );
