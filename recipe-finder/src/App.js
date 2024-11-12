@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import MealPlanner from './pages/MealPlanner';
 import RecipeDetails from './pages/RecipeDetails';
@@ -13,31 +13,9 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      <Header />
+     
       <Router>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/Favorites">Favorites</Link>
-            </li>
-            <li>
-              <Link to="/MealPlanner">MealPlanner</Link>
-            </li>
-            <li>
-              <Link to="/RecipeDetails">RecipeDetails</Link>
-            </li>
-            <li>
-              <Link to="/RecipeSearch">RecipeSearch</Link>
-            </li>
-            <li>
-              <Link to="/ShoppingList">ShoppingList</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Favorites" element={<Favorites />} />
