@@ -1,6 +1,6 @@
 import React from "react";
 
-const Meal_planner = () => {
+const MealPlanner = () => {
   return (
     <div>
       <h1>Meal_planner Page</h1>
@@ -9,4 +9,4 @@ const Meal_planner = () => {
   );
 };
 
-export default Meal_planner;
+export default MealPlanner;
