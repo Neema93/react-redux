@@ -1,12 +1,12 @@
 import React from "react";
 
-const Recipe_search = () => {
+const RecipeSearch = () => {
   return (
     <div>
-      <h1>Recipe_search Page</h1>
+  
       
     </div>
   );
 };
 
-export default Recipe_search;
+export default RecipeSearch;
