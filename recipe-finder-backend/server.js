@@ -1,11 +1,18 @@
 const express = require('express');
+const db = require('./db');
+
 const app = express();
-app.get('/' , (req,res) => {
-    res.send("<h1> Hello!!! </h1>");
 
-})
-const port = process.env.PORT || 8000;
-
+app.get('/', async (req, res) => {
+  try {
+    const result = await db.query('SELECT * FROM recipes');
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
+const port = process.env.port || 8000
 app.listen(port, () => {
-    console.log(`server is running on port ${port}`);
-})
+  console.log(`Server is running on port ${port}`);
+});
