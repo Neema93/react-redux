@@ -38,3 +38,15 @@ CREATE TABLE meal_plan_items (
   day_of_week VARCHAR(20), 
   PRIMARY KEY (meal_plan_id, recipe_id)
 );
+
+INSERT INTO recipes (title, ingredients, instructions, image_url)
+VALUES 
+  ('Spaghetti Carbonara', 
+   'Spaghetti, Eggs, Pancetta, Parmesan, Pepper', 
+   'Cook spaghetti. Fry pancetta. Mix eggs and cheese. Combine all.', 
+   'https://example.com/spaghetti-carbonara.jpg'),
+   
+  ('Chicken Alfredo', 
+   'Chicken, Alfredo sauce, Pasta, Parmesan', 
+   'Cook chicken. Make Alfredo sauce. Mix with pasta and serve.', 
+   'https://example.com/chicken-alfredo.jpg');
