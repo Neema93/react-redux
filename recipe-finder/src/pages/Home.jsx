@@ -1,14 +1,14 @@
-import React from "react";
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Recipe from './components/Recipe';
+import Recipe from '../components/Recipe';
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/recipes')
+    axios.get('http://localhost:8000/api/recipes')
       .then(response => {
         setRecipes(response.data);
         setLoading(false);

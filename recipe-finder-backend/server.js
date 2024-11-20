@@ -4,7 +4,7 @@ const db = require('./db');
 
 const app = express();
 app.use(cors());
-app.get('/', async (req, res) => {
+app.get('/api/recipes', async (req, res) => {
   try {
     const result = await db.query('SELECT * FROM recipes');
     res.json(result.rows);
