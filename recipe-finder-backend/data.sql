@@ -5,7 +5,7 @@ CREATE TABLE recipes (
   ingredients TEXT NOT NULL,
   instructions TEXT NOT NULL,
   image_url VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  
 );
 
 CREATE TABLE users (
