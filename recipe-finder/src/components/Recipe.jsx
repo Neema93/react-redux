@@ -7,13 +7,13 @@ const Recipe = ({ recipe }) => {
   return (
     <div className="recipe">
       <h2>{recipe.title}</h2>
-      <h3>Ingredients:</h3>
+      {/* <h3>Ingredients:</h3> */}
       <img src={recipe.image_url} alt={recipe.title}/>
-      <ul>
+      {/* <ul>
         {ingredientsArray.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
         ))}
-      </ul>
+      </ul> */}
       <h3>Instructions:</h3>
       <p>{recipe.instructions}</p>
     </div>

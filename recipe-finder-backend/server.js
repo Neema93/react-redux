@@ -8,6 +8,9 @@ app.use(cors());
 app.get('/api/recipes', async (req, res) => {
   try {
     const result = await db.query('SELECT * FROM recipes');
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: 'No recipes found' });
+    }
     res.json(result.rows);
   } catch (err) {
     console.error(err);
@@ -17,14 +20,11 @@ app.get('/api/recipes', async (req, res) => {
 // search recipe
 
 app.get('/search', async (req, res) => {
-  const { query } = req.query;  
-
+  const { query } = req.query;
   if (!query) {
     return res.status(400).json({ error: 'Query parameter is required' });
   }
-
   try {
-
     const sqlQuery = `
       SELECT * FROM recipes
       WHERE title ILIKE $1 OR ingredients ILIKE $1
@@ -34,8 +34,7 @@ app.get('/search', async (req, res) => {
     if (result.rows.length === 0) {
       return res.status(404).json({ message: 'No recipes found' });
     }
-
-    res.json(result.rows);  
+    res.json(result.rows);
   } catch (err) {
     console.error('Error fetching recipes:', err);
     res.status(500).json({ error: 'Internal server error' });

@@ -23,6 +23,7 @@ const RecipeSearch = () => {
       // Send GET request to the backend search endpoint
       const response = await axios.get(`http://localhost:8000/search?query=${searchQuery}`);
       setRecipes(response.data);  // Set the recipes state with the search results
+
       setError('');
     } catch (err) {
       console.error('Error fetching search results:', err);
@@ -33,8 +34,6 @@ const RecipeSearch = () => {
 
   return (
     <div>
-      <h1>Recipe Search</h1>
-
       <form onSubmit={handleSearchSubmit}>
         <input
           type="text"
@@ -59,7 +58,7 @@ const RecipeSearch = () => {
           ))}
         </ul>
       ) : (
-        <p>No recipes found</p>
+        <p></p>
       )}
     </div>
   );
