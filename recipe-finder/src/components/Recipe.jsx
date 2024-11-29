@@ -8,7 +8,8 @@ const Recipe = ({ recipe }) => {
     <div className="recipe">
       <h2>{recipe.title}</h2>
       {/* <h3>Ingredients:</h3> */}
-      <img src={recipe.image_url} alt={recipe.title}/>
+      {/* <img src={recipe.image_url} alt={recipe.title}/> */}
+      <img src='./../image/ChickenAlfredo.jpg' />
       {/* <ul>
         {ingredientsArray.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
