@@ -1,9 +1,9 @@
 import React from "react";
 
-const RecipeDetails = () => {
+const RecipeDetails = ({ recipe }) => {
   return (
     <div>
-      <h1>Recipe_details Page</h1>
+       <h2>{recipe.title}</h2>
       
     </div>
   );

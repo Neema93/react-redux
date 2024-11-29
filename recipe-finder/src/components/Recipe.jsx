@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './../styles/Recipe.css'
+import RecipeDetails from '../pages/RecipeDetails'
 const Recipe = ({ recipe }) => {
+  const [showDetails, setShowDetails] = useState(false);
     const ingredientsArray = typeof recipe.ingredients === 'string' 
     ? recipe.ingredients.split(',').map(item => item.trim()) 
     : recipe.ingredients;
+    const handleShowDetails = () => {
+      setShowDetails(true);  // Set to true to show details
+    };
+
   return (
     <div className="recipe">
       <h2>{recipe.title}</h2>
@@ -15,8 +21,14 @@ const Recipe = ({ recipe }) => {
           <li key={index}>{ingredient}</li>
         ))}
       </ul> */}
-      <h3>Instructions:</h3>
-      <p>{recipe.instructions}</p>
+      {/* <h3>Instructions:</h3>
+      <p>{recipe.instructions}</p> */}
+       {showDetails ? (
+        <RecipeDetails recipe={recipe} />
+      ) : (
+        <button onClick={handleShowDetails}>Show more details</button>
+      )}
+   
     </div>
   );
 };
