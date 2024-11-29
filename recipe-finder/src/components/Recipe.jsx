@@ -7,22 +7,23 @@ const Recipe = ({ recipe }) => {
     ? recipe.ingredients.split(',').map(item => item.trim()) 
     : recipe.ingredients;
     const handleShowDetails = () => {
-      setShowDetails(true);  // Set to true to show details
+      setShowDetails(true);  
     };
 
   return (
     <div className="recipe">
       <h2>{recipe.title}</h2>
-      {/* <h3>Ingredients:</h3> */}
-      {/* <img src={recipe.image_url} alt={recipe.title}/> */}
-      <img src='./../image/ChickenAlfredo.jpg' />
-      {/* <ul>
+     
+      <img src={recipe.image_url} alt={recipe.title} />
+
+
+       <h3>Ingredients:</h3>
+      <ul>
         {ingredientsArray.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
         ))}
-      </ul> */}
-      {/* <h3>Instructions:</h3>
-      <p>{recipe.instructions}</p> */}
+      </ul>
+ 
        {showDetails ? (
         <RecipeDetails recipe={recipe} />
       ) : (
