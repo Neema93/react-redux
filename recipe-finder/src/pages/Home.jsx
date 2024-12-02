@@ -10,6 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/recipes')
+
       .then(response => {
         setRecipes(response.data);
         setLoading(false);
