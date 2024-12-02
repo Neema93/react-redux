@@ -20,6 +20,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 // get all Recipe
+app.use('/uploads', express.static('uploads'));  // Serve static files from 'uploads' directory
 
 app.get('/api/recipes', async (req, res) => {
   try {
@@ -64,7 +65,7 @@ app.post('/recipes/upload', upload.single('image'), async (req, res) => {
 
   try {
     const result = await client.query(
-      'INSERT INTO recipes (name, ingredients, instructions, image_path) VALUES ($1, $2, $3, $4) RETURNING id',
+      'INSERT INTO recipes (title, ingredients, instructions, image_url) VALUES ($1, $2, $3, $4) RETURNING id',
       [name, ingredients, instructions, imagePath]
     );
 
