@@ -24,7 +24,7 @@ const RecipeUpload = () => {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:5000/recipes/upload', formData, {
+      const response = await axios.post('http://localhost:8000/recipes/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -44,7 +44,7 @@ const RecipeUpload = () => {
           placeholder="Recipe Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
+        /><br/>
         <textarea
           placeholder="Ingredients"
           value={ingredients}

@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./db');
-
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
 const app = express();
 app.use(cors());
 // Set up multer storage configuration
@@ -19,9 +21,9 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-// get all Recipe
-app.use('/uploads', express.static('uploads'));  // Serve static files from 'uploads' directory
 
+app.use('/uploads', express.static('uploads'));  // Serve static files from 'uploads' directory
+// get all Recipe
 app.get('/api/recipes', async (req, res) => {
   try {
     const result = await db.query('SELECT * FROM recipes');
@@ -64,7 +66,7 @@ app.post('/recipes/upload', upload.single('image'), async (req, res) => {
   const imagePath = req.file ? req.file.path : null;  // Store image path if image is uploaded
 
   try {
-    const result = await client.query(
+    const result = await db.query(
       'INSERT INTO recipes (title, ingredients, instructions, image_url) VALUES ($1, $2, $3, $4) RETURNING id',
       [name, ingredients, instructions, imagePath]
     );

@@ -14,7 +14,7 @@ const Recipe = ({ recipe }) => {
     <div className="recipe">
       <h2>{recipe.title}</h2>
      
-      <img src={recipe.image_url} alt={recipe.title} />
+      <img src={`http://localhost:8000/${recipe.image_url}`} alt={recipe.title} className="image"/>
 
 
        <h3>Ingredients:</h3>

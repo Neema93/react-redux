@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Recipe from '../components/Recipe';
 import RecipeSearch from './RecipeSearch';
+import RecipeUpload from './RcipeUpload';
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -27,7 +28,8 @@ const Home = () => {
 
   return (
     <div >
-      <RecipeSearch />
+      <RecipeSearch /> 
+      <RecipeUpload />
     <h1>Recipe List</h1>
     {recipes.length === 0 ? (
       <p>No recipes found.</p>
