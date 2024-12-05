@@ -12,24 +12,24 @@ const Recipe = ({ recipe }) => {
 
   return (
     <div className="recipe">
-      <h2>{recipe.title}</h2>
-     
+      <h2 className='recipe-title'>{recipe.title}</h2>
+      <div class="recipe-content">
       <img src={`http://localhost:8000/${recipe.image_url}`} alt={recipe.title} className="image"/>
 
-
+      <section class="ingredients">
        <h3>Ingredients:</h3>
       <ul>
         {ingredientsArray.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
         ))}
       </ul>
- 
+      </section>
        {showDetails ? (
         <RecipeDetails recipe={recipe} />
       ) : (
         <button onClick={handleShowDetails}>Show more details</button>
       )}
-   
+   </div>
     </div>
   );
 };
