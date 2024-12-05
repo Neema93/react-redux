@@ -53,7 +53,8 @@ const RecipeSearch = () => {
               <h3>{recipe.title}</h3>
               <p>{recipe.ingredients}</p>
               <p>{recipe.instructions}</p>
-              <img src={recipe.image_url} alt={recipe.title} width="100" />
+              <img src={`http://localhost:8000/${recipe.image_url}`} alt={recipe.title} className="recipe-image"/>
+
             </li>
           ))}
         </ul>

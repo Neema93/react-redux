@@ -31,6 +31,7 @@ const Home = () => {
       <RecipeSearch /> 
       <RecipeUpload />
     <h1>Recipe List</h1>
+    <div className='recipe-section'>
     {recipes.length === 0 ? (
       <p>No recipes found.</p>
     ) : (
@@ -38,6 +39,7 @@ const Home = () => {
         <Recipe key={recipe.id} recipe={recipe} />
       ))
     )}
+    </div>
   </div>
   );
 };

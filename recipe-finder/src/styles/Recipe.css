@@ -1,5 +1,11 @@
-
-.recipe {
+.recipe-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout */
+  gap: 10px;
+  margin-top: 20px;
+}
+/* Basic styling for the recipe box */
+.recipe-box {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
@@ -7,57 +13,83 @@
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents image overflow */
+}
 
-  }
-  
-  .recipe-title {
-    text-align: center;
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
+/* Recipe image styling */
+.recipe-image {
+  width: 100%;  /* Makes the image responsive */
+  height: auto;  /* Keeps aspect ratio intact */
+  border-radius: 10px;
+  margin-bottom: 20px;  /* Space between the image and the recipe content */
+}
+
+/* Recipe title styling */
+.recipe-title {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* General content styling using CSS Grid */
+.recipe-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Ingredients section */
+.ingredients {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients h2 {
+  font-size: 1.5em;
+  color: #6a4d3b;
+  margin-bottom: 10px;
+}
+
+.ingredients ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.ingredients li {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Instructions section */
+.instructions {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h2 {
+  font-size: 1.5em;
+  color: #6a4d3b;
+  margin-bottom: 10px;
+}
+.instructions p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Responsive design: For mobile or smaller screens, switch to a single column */
+@media (max-width: 768px) {
   .recipe-content {
-    display: grid;
-    gap: 20px;
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
   }
-  
-  /* Ingredients section */
-  .ingredients h2 {
-    font-size: 1.5em;
-    color: #6a4d3b;
-    margin-bottom: 10px;
+  .recipe-section {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
   }
-  
-  .ingredients ul {
-    list-style-type: none;
-    padding-left: 20px;
-  }
-  
-  .ingredients li {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 8px;
-  }
-  
-  /* Instructions section */
-  .instructions h2 {
-    font-size: 1.5em;
-    color: #6a4d3b;
-    margin-bottom: 10px;
-  }
-  
-  .instructions ol {
-    padding-left: 20px;
-  }
-  
-  .instructions li {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .image {
-    width: 100px;
-    height: 100px;
-  }
+}

@@ -4,7 +4,7 @@ const RecipeDetails = ({ recipe }) => {
   return (
     <div >
  <section class="instructions">
-      <h3>Instructions:</h3>
+      <h2>Instructions:</h2>
       <p>{recipe.instructions}</p>
       </section>
     </div>

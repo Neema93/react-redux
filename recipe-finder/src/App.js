@@ -10,6 +10,7 @@ import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import '../src/styles/Recipe.css'
 function App() {
   return (
     <div>
