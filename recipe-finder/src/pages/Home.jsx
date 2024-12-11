@@ -8,7 +8,7 @@ import RecipeUpload from './RcipeUpload';
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [recipeForm, setRecipeForm] = useState(false);
   useEffect(() => {
     axios.get('http://localhost:8000/api/recipes')
 
@@ -25,11 +25,18 @@ const Home = () => {
   if (loading) {
     return <div>Loading recipes...</div>;
   }
+  const handleRecipeForm = () => {
+    setRecipeForm(true);  
+  };
 
   return (
     <div >
       <RecipeSearch /> 
-      <RecipeUpload />
+      {recipeForm ? (
+        <RecipeUpload />
+      ) : (
+        <button onClick={handleRecipeForm}>Upload Recipe</button>
+      )}
     <h1>Recipe List</h1>
     <div className='recipe-section'>
     {recipes.length === 0 ? (
