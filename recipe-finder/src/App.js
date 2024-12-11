@@ -10,6 +10,7 @@ import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import RecipeUpload from './pages/RcipeUpload';
 import '../src/styles/Recipe.css'
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/RecipeDetails" element={<RecipeDetails />} />
           <Route path="/RecipeSearch" element={<RecipeSearch />} />
           <Route path="/ShoppingList" element={<ShoppingList />} />
+          <Route path="/RecipeUpload" element={<RecipeUpload />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

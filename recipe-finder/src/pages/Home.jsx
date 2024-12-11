@@ -4,11 +4,11 @@ import axios from 'axios';
 import Recipe from '../components/Recipe';
 import RecipeSearch from './RecipeSearch';
 import RecipeUpload from './RcipeUpload';
-
+import {Link } from "react-router-dom"; 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [recipeForm, setRecipeForm] = useState(false);
+
   useEffect(() => {
     axios.get('http://localhost:8000/api/recipes')
 
@@ -25,18 +25,13 @@ const Home = () => {
   if (loading) {
     return <div>Loading recipes...</div>;
   }
-  const handleRecipeForm = () => {
-    setRecipeForm(true);  
-  };
+ 
 
   return (
     <div >
       <RecipeSearch /> 
-      {recipeForm ? (
-        <RecipeUpload />
-      ) : (
-        <button onClick={handleRecipeForm}>Upload Recipe</button>
-      )}
+      <Link to="/RecipeUpload" className="linkStyle">RecipeUpload</Link>
+     
     <h1>Recipe List</h1>
     <div className='recipe-section'>
     {recipes.length === 0 ? (
