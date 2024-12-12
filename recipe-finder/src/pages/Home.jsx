@@ -30,8 +30,7 @@ const Home = () => {
   return (
     <div >
       <RecipeSearch /> 
-      <Link to="/RecipeUpload" className="linkStyle">RecipeUpload</Link>
-     
+    
     <h1>Recipe List</h1>
     <div className='recipe-section'>
     {recipes.length === 0 ? (

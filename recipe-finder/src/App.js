@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import RecipeUpload from './pages/RcipeUpload';
 import '../src/styles/Recipe.css'
+import '../src/styles/Header.css'
+import '../src/styles/Form.css'
 function App() {
   return (
     <div>

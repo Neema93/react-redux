@@ -40,22 +40,26 @@ const RecipeUpload = () => {
     <div>
       <h1>Upload Recipe</h1>
       <form onSubmit={onSubmit}>
+        <label>Recipe Name</label>
         <input
           type="text"
           placeholder="Recipe Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        /><br/>
+        />
+        <label>Ingredients</label>
         <textarea
           placeholder="Ingredients"
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
         />
+        <label> Instrctions</label>
         <textarea
           placeholder="Instructions"
           value={instructions}
           onChange={(e) => setInstructions(e.target.value)}
         />
+        <label>RecipeImage</label>
         <input type="file" onChange={onFileChange} />
         <button type="submit">Upload Recipe</button>
       </form>
