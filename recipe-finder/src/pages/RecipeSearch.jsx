@@ -40,6 +40,7 @@ const RecipeSearch = () => {
           value={searchQuery}
           onChange={handleSearchChange}
           placeholder="Search for recipes..."
+          className='search'
         />
         <button type="submit">Search</button>
       </form>
