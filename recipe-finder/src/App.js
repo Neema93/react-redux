@@ -11,11 +11,14 @@ import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import RecipeUpload from './pages/RcipeUpload';
+import { Provider } from 'react-redux';
+import store from './store';
 import '../src/styles/Recipe.css'
 import '../src/styles/Header.css'
 import '../src/styles/Form.css'
 function App() {
   return (
+    <Provider store={store}>
     <div>
      
       <Router>
@@ -34,6 +37,7 @@ function App() {
       </Router>
 
     </div>
+    </Provider>
   );
 }
 
