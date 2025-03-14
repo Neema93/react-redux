@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Recipe from '../components/Recipe';
 import RecipeSearch from './RecipeSearch';
-import RecipeUpload from './RcipeUpload';
-import {Link } from "react-router-dom"; 
+
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
